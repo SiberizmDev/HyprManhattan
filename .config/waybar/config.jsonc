@@ -1,0 +1,254 @@
+{
+  "position": "top",
+  "layer": "top",
+  "height": 25,
+  "margin-top": 0,
+  "margin-bottom": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "modules-left": [
+    "custom/launcher",
+    "custom/dot",
+    "hyprland/workspaces",
+    "custom/dotalt",
+    "cpu",
+    "custom/dotalt",
+    "memory"
+  ],
+  "modules-center": [
+    "clock",
+    "custom/dot",
+    "custom/playerctl",
+    "custom/playerlabel"
+  ],
+  "modules-right": [
+    "custom/weather",
+    "custom/dotalt",
+    "bluetooth",
+    "custom/dotalt",
+    "pulseaudio",
+    "custom/dotalt",
+    "network",
+    "custom/dotalt",
+    "battery",
+    "custom/dotalt",
+    "custom/power",
+    "custom/dot",
+    "tray"
+  ],
+  // Modules configuration
+  "clock": {
+    "interval": 60,
+    "align": 0,
+    "rotate": 0,
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+    // "format": "{:%H:%M,       %d %b %a}",
+    "format": "  {:%H:%M}",
+    "format-alt": "  {:%a %b %d %G}",
+  },
+  "hyprland/workspaces": {
+    "active-only": false,
+    "all-outputs": true,
+    "disable-scroll": false,
+    "on-scroll-up": "hyprctl dispatch workspace -1",
+    "on-scroll-down": "hyprctl dispatch workspace +1",
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      //			"1": "一",
+      //			"2": "二",
+      //			"3": "三",
+      //			"4": "四",
+      //			"5": "五",
+      "urgent": "",
+      "active": "",
+      "default": "󰧞",
+      "sort-by-number": true
+    },
+  },
+  "custom/power": {
+    "format": " ⏻ ",
+    "on-click": "rofi -show power-menu -modi power-menu:rofi-power-menu -theme ~/.config/rofi/launchers/type-1/style-14.rasi",
+  },
+  "custom/dot": {
+    "format": "●"
+  },
+  "custom/dotalt": {
+    "format": "●"
+  },
+  "custom/weather": {
+    "format": "{}",
+    "format-alt": "{alt}: {}",
+    "format-alt-click": "click-right",
+    "interval": 3600,
+    "exec": "curl -s 'https://wttr.in/Sivas?format=1'",
+    //"return-type": "json",
+    // "exec": "/usr/bin/python3 ~/.config/hypr/scripts/weath.py",
+    "exec-if": "ping wttr.in -c1"
+  },
+  "custom/spotify": {
+    "exec": "/usr/bin/python3 ~/.config/hypr/scripts/mediaplayer.py",
+    "format": "♫  {}",
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "max-length": 25
+  },
+  "custom/playerctl": {
+    "format": "{icon}",
+    "return-type": "json",
+    "max-length": 64,
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "on-click": "playerctl play-pause",
+    "format-icons": {
+      "Playing": " 󰒮  󰏥  󰒭 ",
+      "Paused": " 󰒮  󰐌  󰒭 "
+    },
+  },
+  "custom/playerlabel": {
+    "format": "<span>{}</span>",
+    "return-type": "json",
+    "max-length": 20,
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "on-click": "playerctl play-pause",
+    "format-icons": {
+      "Playing": "󰒮  󰐌  󰒭",
+      "Paused": "󰒮  󰏥  󰒭"
+    },
+  },
+  "memory": {
+    "format": "󰍛  {}%",
+    "format-alt": "󰍛  {used}/{total} GiB",
+    "interval": 5
+  },
+  "cpu": {
+    "format": "󰻠  {usage}%",
+    "format-alt": "󰻠  {avg_frequency} GHz",
+    "interval": 5
+  },
+  "disk": {
+    "format": "󰋊  {}%",
+    "format-alt": "󰋊 {used}/{total} GiB",
+    "interval": 5,
+  },
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}  {capacity: >3}%",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+    //"format-icons": ["", "", "", "", "", "", "", "", "", ""]
+  },
+  "network": {
+    // "interface": "wlp2s0", // (Optional) To force the use of this interface
+    "format": "⚠  Disabled",
+    "format-wifi": "  {essid}",
+    // "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+    "format-ethernet": "  Wired",
+    "format-disconnected": "⚠  Disconnected",
+    // "on-click": "alacritty -e nmtui"
+    "on-click": "sh ~/.config/rofi/nmcli/nmcli",
+    "on-click-right": "nm-connection-editor"
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 5
+  },
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "{icon}  {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    //	"on-scroll-up":,
+    //	"on-scroll-down":,
+  },
+  "pulseaudio": {
+    "format": " 󰕾  {volume}%",
+    /*"format": "{icon} {volume}",*/
+    /*"format": "{icon}",*/
+    "format-muted": " 󰖁  Mute",
+    "format-bluetooth": "󰕾  {volume}%",
+    "format-bluetooth-muted": " 󰖁  Mute",
+    "format-source": "{volume}",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "󰕾",
+        "󰕾",
+        "󰕾"
+      ]
+    },
+    "scroll-step": 5.0,
+    "on-click": "pamixer -t",
+    "on-click-right": "pavucontrol-qt",
+    "on-scroll-up": "sh ~/.config/hypr/scripts/volume --inc",
+    "on-scroll-down": "sh ~/.config/hypr/scripts/volume --dec",
+    "smooth-scrolling-threshold": 1
+  },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": "   {volume}%",
+    "format-source-muted": "   Mute",
+    "on-click": "pamixer --default-source -t",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "pamixer --default-source -i 5",
+    "on-scroll-down": "pamixer --default-source -d 5",
+    "scroll-step": 5
+  },
+  "custom/randwall": {
+    "format": "󰏘",
+    "on-click": "bash $HOME/.config/hypr/randwall.sh",
+    "on-click-right": "bash $HOME/.config/hypr/wall.sh"
+  },
+  "custom/launcher": {
+    "format": " ",
+    "tooltip": false,
+    "on-click": "rofi -show drun -show-icons -theme ~/.config/rofi/launchers/type-1/style-7.rasi",
+    "on-click-right": "$HOME/.config/hypr/scripts/menu",
+  },
+  "custom/wf-recorder": {
+    "format": "{}",
+    "interval": "once",
+    "exec": "echo ''",
+    "tooltip": "false",
+    "exec-if": "pgrep 'wf-recorder'",
+    "on-click": "exec ./scripts/wlrecord.sh",
+    "signal": 8
+  },
+  "custom/hyprpicker": {
+    "format": "󰈋",
+    "on-click": "hyprpicker -a -f hex",
+    "on-click-right": "hyprpicker -a -f rgb"
+  },
+}
+}
