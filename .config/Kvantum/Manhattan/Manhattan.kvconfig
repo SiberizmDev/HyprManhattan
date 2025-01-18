@@ -55,7 +55,7 @@ transient_groove=false
 dark_titlebar=true
 
 [GeneralColors]
-window.color=#1e2127
+window.color=#20262C
 base.color=#282c34
 alt.base.color=#21252B
 button.color=#2c313a
