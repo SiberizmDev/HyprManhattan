@@ -5,7 +5,7 @@
 THEME='Manhattan'
 ICONS='Tela'
 FONT='Noto Sans 10'
-CURSOR='Qogirr'
+CURSOR='Future'
 
 SCHEMA='gsettings set org.gnome.desktop.interface'
 
