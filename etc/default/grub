@@ -1,0 +1,13 @@
+# Add Lines
+# =======================================
+
+# Timeout 0
+GRUB_TIMEOUT=0
+
+# Close terminal codes add Splash
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet splash"
+
+# =======================================
+
+# Change theme
+GRUB_THEME="/usr/share/grub/themes/Elegant-forest-sharp-left-dark/theme.txt"
