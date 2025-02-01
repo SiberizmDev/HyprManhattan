@@ -124,7 +124,7 @@
     "format": ""
   },
   "custom/memicon": {
-    "format": " "
+    "format": ""
   },
   "custom/diskicon": {
     "format": "󰋊"
@@ -146,11 +146,11 @@
     "on-scroll-down": "brightnessctl set 5%-"
   },
   "custom/baticon": {
-    "format": " ",
+    "format": "",
     "rotate": 90
   },
   "custom/neticon": {
-    "format": " "
+    "format": ""
   },
   "custom/clockicon": {
     "format": "⏱"
@@ -212,7 +212,7 @@
     "on-click-right": "hyprpicker -a -f rgb"
   },
   "custom/menu": {
-    "format": " ",
+    "format": "",
     "tooltip": false,
     "on-click": "rofi -show drun -show-icons -theme ~/.config/rofi/launchers/type-1/style-14.rasi",
     "on-click-right": "$HOME/.config/hypr/scripts/menu",
