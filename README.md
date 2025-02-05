@@ -60,6 +60,18 @@ Pay attention to the file and folder names I wrote. If the name of your configur
 
 For example, I have a file named `.aliases`. This file does not have to be available to everyone. You don't need to force a backup for this.
 
+# First, let's set up a YAY (AUR assistant)
+```
+cd /opt/
+
+sudo git clone https://aur.archlinux.org/yay-bin
+
+sudo chown -R username:username yay-bin
+
+cd yay-bin
+
+makepkg -si
+```
 
 # Required Softwares
 
@@ -67,7 +79,7 @@ Let's install our software:
 
 ```
 [Arch Linux]
-yay -S nm-connection-editor cava viewnior mpd mpv vlc okular libreoffice-fresh hyprland waybar steam swaybg swayidle grimblast sddm brightnessctl geany spicetify-cli playerctl hyprlock pamixer rofi-wayland wlogout hyprswitch nwg-dock nwg-drawer wf-recorder btop zsh oh-my-zsh-powerline-theme-git ark unrar zip unzip pavucontrol pavucontrol-qt xdg-desktop-portal-wlr neovim vim nano git wget mpvpaper dunst thunar kvantum kvantum-qt5 kate appimagelauncher-bin noto-fonts-emoji wl-clipboard xfce4-appfinder wofi catfish zen-browser kitty polkit-gnome gnome-keyring ntfs-3g cliphist qt5ct qt5 qt6 qt6ct plasma lxappearance tesseract-data-tur tesseract-data-eng tesseract-data-rus jdk-openjdk discord ferdium-bin bitwarden flatpak alacritty neofetch hyprpicker spotify qbittorrent obs-studio wine wlogout ente-auth-bin kdeconnect thunderbird rofimoji localsend-bin
+yay -S nm-connection-editor cava viewnior mpd mpv vlc okular libreoffice-fresh hyprland waybar steam swaybg swayidle grimblast sddm brightnessctl geany spicetify-cli playerctl hyprlock pamixer rofi-wayland wlogout hyprswitch nwg-dock nwg-drawer wf-recorder btop zsh oh-my-zsh-powerline-theme-git ark unrar zip unzip pavucontrol pavucontrol-qt xdg-desktop-portal-wlr neovim vim nano git wget mpvpaper dunst thunar kvantum kvantum-qt5 kate appimagelauncher-bin noto-fonts-emoji wl-clipboard xfce4-appfinder wofi catfish zen-browser kitty polkit-gnome gnome-keyring ntfs-3g cliphist qt5ct qt5 qt6 qt6ct plasma lxappearance proton-vpn-gtk-app tesseract-data-tur tesseract-data-eng tesseract-data-rus jdk-openjdk discord ferdium-bin bitwarden flatpak alacritty neofetch hyprpicker spotify qbittorrent obs-studio wine wlogout ente-auth-bin kdeconnect thunderbird rofimoji localsend-bin
 ```
 
 
@@ -83,6 +95,27 @@ yay -S rustup visual-studio-code-bin nodejs npm go python-pip pyhton filezilla g
 ```
 [Arch Linux]
 yay -S gimp krita inkscape pitivi kdenlive
+```
+
+# Install VPN (Especially Recommended for Turkey)
+
+- We have already downloaded Proton VPN when installing programs
+
+- Install Open VPN and some VPN servers
+
+```
+sudo pacman -S networkmanager networkmanager-openvpn network-manager-applet openvpn
+
+cd /etc/openvpn
+wget http://support.fastestvpn.com/download/fastestvpn_ovpn/ -O fastestvpn_ovpn.zip
+```
+
+- Unzip and Copy
+
+```
+unzip fastestvpn_ovpn.zip
+
+cp /etc/openvpn/tcp_files/* /etc/openvpn/ && cp /etc/openvpn/udp_files/* /etc/openvpn/
 ```
 
 
