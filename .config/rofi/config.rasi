@@ -184,4 +184,6 @@ configuration {
 	me-accept-custom: "Control+MouseDPrimary";
 }
 
+//@theme "/home/siberizm/.config/rofi/themes/Hypno_Custom.rasi"
+
 @theme "/home/siberizm/.config/rofi/themes/Hypno_Custom.rasi"
