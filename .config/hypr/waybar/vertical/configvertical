@@ -1,5 +1,5 @@
 {
-  "include": "~/.config/hypr/waybar/modulesvertical",
+  "include": "~/.config/hypr/waybar/vertical/modulesvertical",
   "layer": "top",
   "mode": "dock",
   "exclusive": true,
@@ -16,5 +16,5 @@
   },
   "custom/spotify": {
     "max-length": 25
-  },
+  }
 }

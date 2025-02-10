@@ -79,7 +79,7 @@ Let's install our software:
 
 ```
 [Arch Linux]
-yay -S nm-connection-editor cava viewnior mpd mpv vlc okular libreoffice-fresh hyprland waybar steam swaybg swayidle grimblast sddm brightnessctl geany spicetify-cli playerctl hyprlock pamixer rofi-wayland wlogout hyprswitch nwg-dock nwg-drawer wf-recorder btop zsh oh-my-zsh-powerline-theme-git ark unrar zip unzip pavucontrol pavucontrol-qt xdg-desktop-portal-wlr neovim vim nano git wget mpvpaper dunst thunar kvantum kvantum-qt5 kate appimagelauncher-bin noto-fonts-emoji wl-clipboard xfce4-appfinder wofi catfish zen-browser kitty polkit-gnome gnome-keyring ntfs-3g cliphist qt5ct qt5 qt6 qt6ct plasma lxappearance proton-vpn-gtk-app tesseract-data-tur tesseract-data-eng tesseract-data-rus jdk-openjdk discord ferdium-bin bitwarden flatpak alacritty neofetch hyprpicker spotify qbittorrent obs-studio wine wlogout ente-auth-bin kdeconnect thunderbird rofimoji localsend-bin
+yay -S nm-connection-editor cava viewnior mpd mpv vlc okular libreoffice-fresh hyprland waybar steam swaybg swayidle grimblast sddm brightnessctl geany spicetify-cli playerctl hyprlock pamixer rofi-wayland wlogout hyprswitch nwg-dock nwg-drawer wf-recorder btop zsh oh-my-zsh-powerline-theme-git ark unrar zip unzip pavucontrol pavucontrol-qt xdg-desktop-portal-wlr neovim vim nano git wget mpvpaper dunst thunar kvantum kvantum-qt5 kate appimagelauncher-bin noto-fonts-emoji wl-clipboard xfce4-appfinder wofi catfish zen-browser librewolf-bin kitty polkit-gnome gnome-keyring ntfs-3g cliphist qt5ct qt5 qt6 qt6ct plasma lxappearance proton-vpn-gtk-app tesseract-data-tur tesseract-data-eng tesseract-data-rus jdk-openjdk discord ferdium-bin bitwarden flatpak alacritty neofetch hyprpicker spotify qbittorrent obs-studio wine wlogout ente-auth-bin kdeconnect thunderbird rofimoji localsend-bin
 ```
 
 
@@ -118,6 +118,20 @@ unzip fastestvpn_ovpn.zip
 cp /etc/openvpn/tcp_files/* /etc/openvpn/ && cp /etc/openvpn/udp_files/* /etc/openvpn/
 ```
 
+# Firefox Installation
+
+- In this step, we just need to install 2 plugins
+
+1- Sidebery
+2- Manhattan GTK Dark (Theme)
+
+Then you just need to copy and paste everything in the configDocument folder located in the .mozilla folder (ShyFox built on customized config)
+
+- Finally, you need to type the codes in sidebery.css into the stylesheet section of the Sidebery plugin
+
+# Screenshot Firefox
+
+![SS](Firefox.png)
 
 # Install PHP Server (Completely optional. I wrote for myself)
 
@@ -230,3 +244,7 @@ chsh -s $(which zsh)
 # Screenshot Desktop
 
 ![SS](SS.png)
+
+# Screenshot Spotify
+
+![SS](Spotify.png)
