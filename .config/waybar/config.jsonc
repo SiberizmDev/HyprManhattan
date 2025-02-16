@@ -13,18 +13,19 @@
     "custom/dotalt",
     "cpu",
     "custom/dotalt",
-    "memory"
+    "memory",
+    "custom/dotalt",
+    "disk"
   ],
   "modules-center": [
     "clock",
     "custom/dot",
     "custom/playerctl",
-    "custom/playerlabel"
+    "custom/playerlabel",
+    "mpd"
   ],
   "modules-right": [
     "custom/weather",
-    "custom/dotalt",
-    "bluetooth",
     "custom/dotalt",
     "pulseaudio",
     "custom/dotalt",
@@ -68,7 +69,7 @@
   },
   "custom/power": {
     "format": " ⏻ ",
-    "on-click": "rofi -show power-menu -modi power-menu:rofi-power-menu -theme ~/.config/rofi/launchers/type-1/style-14.rasi",
+    "on-click": "sh .config/bspwm/scripts/rofi_powermenu",
   },
   "custom/dot": {
     "format": "●"
@@ -119,7 +120,32 @@
     "format-icons": {
       "Playing": "󰒮  󰐌  󰒭",
       "Paused": "󰒮  󰏥  󰒭"
+    }
+  },
+  "mpd": {
+    "format": "{stateIcon} {artist} - {title}",
+    "format-disconnected": "Disconnected",
+    "format-stopped": "Stopped",
+    "interval": 2,
+    "consume-icons": {
+      "on": " "
     },
+    "random-icons": {
+      "off": "<span color=\"#f53c3c\"></span> ",
+      "on": " "
+    },
+    "repeat-icons": {
+      "on": " "
+    },
+    "single-icons": {
+      "on": "1 "
+    },
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)"
   },
   "memory": {
     "format": "󰍛  {}%",
@@ -231,9 +257,9 @@
     "on-click-right": "bash $HOME/.config/hypr/wall.sh"
   },
   "custom/launcher": {
-    "format": " ",
+    "format": "",
     "tooltip": false,
-    "on-click": "rofi -show drun -show-icons -theme ~/.config/rofi/launchers/type-1/style-7.rasi",
+    "on-click": "rofi -show drun -show-icons -theme ~/.config/rofi/launchers/type-1/style-9.rasi",
     "on-click-right": "$HOME/.config/hypr/scripts/menu",
   },
   "custom/wf-recorder": {

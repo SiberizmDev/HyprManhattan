@@ -2,28 +2,32 @@
     border: none;
     border-radius: 0px;
     /*font-family: VictorMono, Iosevka Nerd Font, Noto Sans CJK;*/
-    font-family: Iosevka, FontAwesome, Noto Sans CJK;
+    font-family:
+        Iosevka,
+        FontAwesome,
+        Noto Sans CJK;
     font-size: 12px;
     font-style: normal;
     min-height: 0;
 }
 
 window#waybar {
-    background: #20262E;
-    color: #f4d9e1
+    background: #20262c;
+    color: #f4d9e1;
 }
 
 #workspaces {
-	background: #343A42;
-	margin: 7px 7px 7px 7px;
-  padding: 0px 10px 0px 5px;
-	border-radius: 20px;
-  font-weight: normal;
-  font-style: normal;
+    background: #2a323b;
+    margin: 7px 7px 7px 7px;
+    padding: 0px 10px 0px 5px;
+    border-radius: 20px;
+    font-weight: normal;
+    font-style: normal;
 }
+
 #workspaces button {
     padding: 0px 5px;
-    color: #708d5d;
+    color: #6a6383;
 }
 
 #workspaces button.active {
@@ -31,50 +35,57 @@ window#waybar {
 }
 
 #workspaces button:hover {
-	background-color: #a2c987;
-	color: #20262E;
-	border-radius: 8px;
+    background-color: #6a6383;
+    color: #20262c;
+    border-radius: 8px;
 }
 
-#custom-launcher, #workspaces button.active, #custom-spotify, #battery, #network{
+#workspaces button.active,
+#custom-spotify,
+#battery,
+#network {
     border-radius: 20px;
-    color: #87AA70;
+    color: #b4a1db;
 }
 
-#custom-date, #pulseaudio, #network, #custom-dot, #custom-dotalt{
-	background: transparent;
-	padding: 5px 5px 5px 5px;
-  border-radius: 8px;
-  border: solid 0px #f4d9e1;
+#custom-date,
+#pulseaudio,
+#network,
+#custom-dot,
+#custom-dotalt {
+    background: transparent;
+    padding: 5px 5px 5px 5px;
+    border-radius: 8px;
+    border: solid 0px #f4d9e1;
 }
 
-#custom-dot{
+#custom-dot {
     font-size: 10px;
-    color: #555D6E;
+    color: #555d6e;
     margin: 1px;
 }
 
-#custom-dotalt{
+#custom-dotalt {
     font-size: 10px;
-    color: #343A42;
+    color: #2a323b;
     margin: 1px;
 }
 
 #custom-date {
-	color: #D3869B;
+    color: #d3869b;
 }
 
 #custom-power {
-	color: #B25C5E;
-	background-color: #343A42;
-	border-radius: 20px;
-	margin: 7px;
-	padding: 1px;
-    font-size: 20px;
+    color: #b25c5e;
+    background-color: #2a323b;
+    border-radius: 20px;
+    margin: 7px;
+    padding: 1px;
+    font-size: 16px;
 }
 
 #tray {
-    background: #343A42;
+    background: #2a323b;
     margin: 7px;
     border-radius: 20px;
     padding: 0px 10px;
@@ -83,7 +94,7 @@ window#waybar {
 
 #clock {
     color: white;
-    background-color: #343A42;
+    background-color: #2a323b;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 20px;
@@ -110,13 +121,13 @@ window#waybar {
     border-radius: 5px 5px 5px 5px;
 }
 
-#bluetooth{
-    color: #76895A;
+#bluetooth {
+    color: #89b4fa;
 }
 
 #network,
 #custom-spotify {
-    color: #A96ABA;
+    color: #89b4fa;
     border-radius: 8px;
     margin: 5px;
     margin-right: 5px;
@@ -125,14 +136,13 @@ window#waybar {
 }
 
 #pulseaudio {
-    color: #5D9ACE;
+    color: #74dd91;
     border-radius: 8px;
     margin: 5px;
     margin-left: 5px;
     margin-right: 0px;
     font-weight: bold;
 }
-    
 
 #pulseaudio.muted {
     /*color: #FABD2D;*/
@@ -150,7 +160,9 @@ window#waybar {
 }
 
 #custom-launcher {
-    background-color: #343A42;
+    color: #b1afd6;
+    border-radius: 20px;
+    background-color: #2a323b;
     margin: 7px;
     padding: 0 10px 0 10px;
     /*border-right: solid 1px #282738;*/
@@ -158,19 +170,19 @@ window#waybar {
 }
 
 #custom-playerctl {
-	background: #343A42;
-    color: #87AA70;
-	padding-left: 15px;
-  padding-right: 14px;
-	border-radius: 20px;
-  /*border-left: solid 1px #282738;*/
-  /*border-right: solid 1px #282738;*/
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 5px;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 16px;
+    background: #2a323b;
+    color: #b1afd6;
+    padding-left: 15px;
+    padding-right: 14px;
+    border-radius: 20px;
+    /*border-left: solid 1px #282738;*/
+    /*border-right: solid 1px #282738;*/
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
 }
 
 #custom-playerlabel {
@@ -188,7 +200,7 @@ window#waybar {
 }
 
 #window {
-    background: #343A42;
+    background: #2a323b;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 8px;
@@ -203,19 +215,19 @@ window#waybar {
 #custom-wf-recorder {
     padding: 0 20px;
     color: #e5809e;
-    background-color: #1E1E2E;
+    background-color: #1e1e2e;
 }
 
-#cpu{
-    color: #BC9D5A;
+#cpu {
+    color: #89dceb;
 }
 
-#memory{
-    color: #52A0AC;
+#memory {
+    color: #eba0ac;
 }
 
-#backlight{
-    color: #FF7AC9;
+#backlight {
+    color: #ff7ac9;
 }
 
 #cpu,
@@ -230,8 +242,8 @@ window#waybar {
 }
 
 #battery {
-    background-color: #343A42;
-    color: #82A569;
+    background-color: #2a323b;
+    color: #b4a1db;
     margin: 7px;
     margin-left: 5px;
     padding: 0px 15px 0px 15px;
@@ -249,7 +261,7 @@ window#waybar {
 }
 
 #disk {
-    color: #FF79C6;
+    color: #ff79c6;
     margin: 5px;
     margin-left: 5px;
     margin-right: 5px;
@@ -258,7 +270,7 @@ window#waybar {
 }
 
 #custom-hyprpicker {
-    background-color: #343A42;
+    background-color: #2a323b;
     /*color: #8EC07C;*/
     border-radius: 8px;
     margin: 5px;

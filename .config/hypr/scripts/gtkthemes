@@ -3,7 +3,7 @@
 ## Set GTK Themes, Icons, Cursor and Fonts
 
 THEME='Manhattan'
-ICONS='Tela-dark'
+ICONS='Slot-Dark-Icons'
 FONT='Noto Sans 10'
 CURSOR='Future'
 

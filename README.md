@@ -1,10 +1,10 @@
 # Dotfiles Install
 
 ```
-git clone https://github.com/SiberizmDev/HyprNord.git
+git clone https://github.com/SiberizmDev/HyprManhattan.git
 ```
 
-```cd HyprNord```
+```cd HyprManhattan```
 
 install it manually:
 
@@ -20,45 +20,12 @@ cp -r ~/.zshrc ~/.zshrc.bak
 cp -r ~/.aliases ~/.aliases.bak
 ```
 
-Or take a manual backup:
+# Let's Restore Git
 
-
-- Don't lose your configuration:
-
-Go to the `/home/user/` directory and copy the `.config` folder and paste it without leaving the same directory. Change the name of the pasted folder to `.config.bak`
-
-
-- Don't lose your icons:
-
-Go to the `/home/user/` directory and copy the `.icons` folder and paste it without leaving the same directory. Change the name of the pasted folder to `.icons.bak`
-
-
-- Don't lose your fonts:
-
-Go to the `/home/user/` directory and copy the `.fonts` folder and paste it without leaving the same directory. Change the name of the pasted folder to `.fonts.bak`
-
-
-- Don't lose your themes:
-
-Go to the `/home/user/` directory and copy the `.themes` folder and paste it without leaving the same directory. Change the name of the pasted folder to `.themes.bak`
-
-
-Now let's back up our files:
-
-
-- Don't lose your ZSH configuration:
-
-Go to the `/home/user/` directory and copy and paste the `.zshrc` file without leaving the same directory. Change the name of the pasted file to `.zshrc.bak`
-
-
-- Aliases are a file specially prepared for me. Most likely you do not have this file. If so, follow this step:
-
-Go to the `/home/user/` directory and copy and paste the `.aliases` file without leaving the same directory. Change the name of the pasted file to `.aliases.bak`
-
-
-Pay attention to the file and folder names I wrote. If the name of your configuration files is not currently written, you do not have any previous configuration. You don't need to make backups for these.
-
-For example, I have a file named `.aliases`. This file does not have to be available to everyone. You don't need to force a backup for this.
+```
+[Arch Linux]
+sudo pacman -S git wget 
+```
 
 # First, let's set up a YAY (AUR assistant)
 ```
@@ -79,7 +46,10 @@ Let's install our software:
 
 ```
 [Arch Linux]
-yay -S nm-connection-editor cava viewnior mpd mpv vlc okular libreoffice-fresh hyprland waybar steam swaybg swayidle grimblast sddm brightnessctl geany spicetify-cli playerctl hyprlock pamixer rofi-wayland wlogout hyprswitch nwg-dock nwg-drawer wf-recorder btop zsh oh-my-zsh-powerline-theme-git ark unrar zip unzip pavucontrol pavucontrol-qt xdg-desktop-portal-wlr neovim vim nano git wget mpvpaper dunst thunar kvantum kvantum-qt5 kate appimagelauncher-bin noto-fonts-emoji wl-clipboard xfce4-appfinder wofi catfish zen-browser librewolf-bin kitty polkit-gnome gnome-keyring ntfs-3g cliphist qt5ct qt5 qt6 qt6ct plasma lxappearance proton-vpn-gtk-app tesseract-data-tur tesseract-data-eng tesseract-data-rus jdk-openjdk discord zoom galculator ferdium-bin skypeforlinux-bin bitwarden flatpak alacritty neofetch hyprpicker spotify qbittorrent obs-studio wine wlogout ente-auth-bin kdeconnect thunderbird rofimoji localsend-bin
+yay -S nm-connection-editor cava viewnior mpd mpc mpv vlc okular libreoffice-fresh hyprland waybar steam swaybg swayidle grimblast sddm brightnessctl geany spicetify-cli playerctl stow hyprlock hyprpicker pamixer rofi-wayland wlogout hyprswitch nwg-dock nwg-drawer wf-recorder btop zsh oh-my-zsh-powerline-theme-git ark unrar zip unzip pavucontrol pavucontrol-qt xdg-desktop-portal-wlr neovim vim nano neofetch mpvpaper dunst thunar kvantum kvantum-qt5 kate appimagelauncher-bin noto-fonts-emoji wl-clipboard xfce4-appfinder wofi catfish zen-browser librewolf-bin kitty polkit-gnome gnome-keyring ntfs-3g cliphist qt5ct qt5 qt6 qt6ct plasma lxappearance proton-vpn-gtk-app tesseract-data-tur tesseract-data-eng tesseract-data-rus jdk-openjdk
+
+[Firefox]
+sudo dnf in nm-connection-editor cava viewnior mpd vlc okular libreoffice hyprland waybar steam swaybg swayidle grim sddm brightnessctl geany playerctl stow hyprlock hyprpicker pamixer rofi-wayland wf-recorder btop zsh htop ark unrar zip unzip pavucontrol pavucontrol-qt xdg-desktop-portal-wlr neovim vim neofetch dunst thunar thunar-volman thunar-archive-plugin kvantum kvantum-qt5 kate google-noto-fonts-all wl-clipboard xfce4-appfinder wofi catfish firefox kitty gnome-keyring ntfs-3g qt5ct qt6ct lxappearance
 ```
 
 
@@ -90,11 +60,79 @@ yay -S nm-connection-editor cava viewnior mpd mpv vlc okular libreoffice-fresh h
 yay -S rustup visual-studio-code-bin nodejs npm go python-pip pyhton filezilla github-desktop-bin gitkraken postman-bin apache php php-apache phpmyadmin mariadb meld 
 ```
 
+
 # Image Manipultaion Softwares
 
 ```
 [Arch Linux]
 yay -S gimp krita inkscape pitivi kdenlive
+```
+
+
+# For Me
+
+```
+[Arch Linux]
+yay -S discord zoom galculator ferdium-bin skypeforlinux-bin bitwarden flatpak alacritty spotify qbittorrent obs-studio steam wine ente-auth-bin kdeconnect thunderbird rofimoji localsend-bin
+```
+
+
+# MPD & MPC Config
+
+- Create Required folders and files
+
+```
+mkdir -p ~/.config/mpd/{playlists,log}
+
+touch ~/.config/mpd/{database,log/mpd.log,state,sticker.sql}
+```
+
+- Edit .config/mpd/mpd.conf
+
+```
+music_directory    "~/Music"
+playlist_directory "~/.config/mpd/playlists"
+db_file           "~/.config/mpd/database"
+log_file          "~/.config/mpd/log/mpd.log"
+pid_file          "~/.config/mpd/pid"
+state_file        "~/.config/mpd/state"
+sticker_file      "~/.config/mpd/sticker.sql"
+
+bind_to_address "localhost"
+
+audio_output {
+    type  "pipewire"
+    name  "PipeWire Sound Server"
+}
+
+default_permissions "read,add,control,admin"
+```
+
+- And the finishing touches
+
+```
+killall mpd
+
+mpd ~/.config/mpd/mpd.conf
+
+mpc update
+
+mpc add /
+```
+
+- If Error
+
+```
+sudo systemctl stop mpd.socket
+sudo systemctl stop mpd.service
+
+sudo lsof -i :6600
+
+mpd ~/.config/mpd/mpd.conf
+mpc update
+
+sudo systemctl disable mpd.socket
+sudo systemctl disable mpd.service
 ```
 
 # Install VPN (Especially Recommended for Turkey)
@@ -132,6 +170,7 @@ Then you just need to copy and paste everything in the configDocument folder loc
 # Screenshot Firefox
 
 ![SS](Firefox.png)
+
 
 # Install PHP Server (Completely optional. I wrote for myself)
 
