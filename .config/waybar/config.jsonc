@@ -33,9 +33,9 @@
     "custom/dotalt",
     "battery",
     "custom/dotalt",
-    "custom/power",
+    "tray",
     "custom/dot",
-    "tray"
+    "custom/power",
   ],
   // Modules configuration
   "clock": {
