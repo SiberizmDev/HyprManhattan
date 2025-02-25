@@ -46,7 +46,7 @@ Let's install our software:
 
 ```
 [Arch Linux]
-yay -S nm-connection-editor cava viewnior mpd mpc mpv vlc okular libreoffice-fresh hyprland waybar steam swaybg swayidle grimblast sddm brightnessctl geany spicetify-cli playerctl stow hyprlock hyprpicker pamixer rofi-wayland wlogout hyprswitch nwg-dock nwg-drawer wf-recorder btop zsh oh-my-zsh-powerline-theme-git ark unrar zip unzip pavucontrol pavucontrol-qt xdg-desktop-portal-wlr neovim vim nano neofetch mpvpaper dunst thunar kvantum kvantum-qt5 kate appimagelauncher-bin noto-fonts-emoji wl-clipboard xfce4-appfinder wofi catfish zen-browser librewolf-bin kitty polkit-gnome gnome-keyring ntfs-3g cliphist qt5ct qt5 qt6 qt6ct plasma lxappearance proton-vpn-gtk-app tesseract-data-tur tesseract-data-eng tesseract-data-rus jdk-openjdk
+yay -S nm-connection-editor cava viewnior mpd mpc mpv vlc okular libreoffice-fresh hyprland waybar steam swaybg swayidle grimblast sddm brightnessctl geany spicetify-cli playerctl stow hyprlock hyprpicker pamixer rofi-wayland wlogout hyprswitch nwg-dock nwg-drawer wf-recorder btop zsh oh-my-zsh-powerline-theme-git ark unrar zip unzip pavucontrol pavucontrol-qt xdg-desktop-portal-wlr neovim vim nano neofetch mpvpaper dunst thunar kvantum kvantum-qt5 kate appimagelauncher-bin noto-fonts-emoji wl-clipboard xfce4-appfinder wofi catfish zen-browser librewolf-bin kitty polkit-gnome gnome-keyring ntfs-3g cliphist qt5ct qt5 qt6 qt6ct plasma lxappearance proton-vpn-gtk-app snapper snapper-pac snapper-gui-git tesseract-data-tur tesseract-data-eng tesseract-data-rus jdk-openjdk
 
 [Firefox]
 sudo dnf in nm-connection-editor cava viewnior mpd vlc okular libreoffice hyprland waybar steam swaybg swayidle grim sddm brightnessctl geany playerctl stow hyprlock hyprpicker pamixer rofi-wayland wf-recorder btop zsh htop ark unrar zip unzip pavucontrol pavucontrol-qt xdg-desktop-portal-wlr neovim vim neofetch dunst thunar thunar-volman thunar-archive-plugin kvantum kvantum-qt5 kate google-noto-fonts-all wl-clipboard xfce4-appfinder wofi catfish firefox kitty gnome-keyring ntfs-3g qt5ct qt6ct lxappearance
@@ -65,7 +65,7 @@ yay -S rustup visual-studio-code-bin nodejs npm go python-pip pyhton filezilla g
 
 ```
 [Arch Linux]
-yay -S gimp krita inkscape pitivi kdenlive
+yay -S gimp pinta krita inkscape pitivi kdenlive
 ```
 
 
@@ -76,6 +76,10 @@ yay -S gimp krita inkscape pitivi kdenlive
 yay -S discord zoom galculator ferdium-bin skypeforlinux-bin bitwarden flatpak alacritty spotify qbittorrent obs-studio steam wine ente-auth-bin kdeconnect thunderbird rofimoji localsend-bin
 ```
 
+# BTRFS Settings
+
+- Visit a Link:
+```https://www.dwarmstrong.org/btrfs-snapshots-rollbacks/```
 
 # MPD & MPC Config
 
